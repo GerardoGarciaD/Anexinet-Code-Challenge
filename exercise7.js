@@ -6,7 +6,7 @@ function longestString(s) {
   // An array is created from the original String sentence
   let array = s.split(" ");
 
-  // A loop goes through all the elements to obtain the max length of every word
+  // A loop goes through all the elements to obtain the max length of all the words
   array.forEach((e) => {
     if (e.length > maxLength) maxLength = e.length;
   });

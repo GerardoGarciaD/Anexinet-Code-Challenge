@@ -1,7 +1,11 @@
 function repeatedCharacters(firstString, secondString) {
-  let arrayString = [...firstString];
+  // An array is created from the first string
+  let arrayString = [...firstString.trim()];
   let resultArray = [];
-  [...secondString].forEach((e) => {
+
+  // A loop through the second array is done, to add the repeated characters of both  strings
+  [...secondString.trim()].forEach((e) => {
+    // This is to verify if some element is already on the result array, if is not, it's added
     if (arrayString.includes(e)) {
       resultArray.push(e);
     }
@@ -10,5 +14,5 @@ function repeatedCharacters(firstString, secondString) {
   return resultArray;
 }
 
-let duplicatedCharacters = repeatedCharacters("abcde", "aced");
-console.log(duplicatedCharacters);
+let repeatedChars = repeatedCharacters("abcde", "aced");
+console.log(repeatedChars);
